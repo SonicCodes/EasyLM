@@ -19,7 +19,7 @@ python -m EasyLM.models.llama.llama_train \
     --log_freq=50 \
     --save_model_freq=0 \
     --save_milestone_freq=2500 \
-    --load_llama_config='3b' \
+    --load_llama_config='1b' \
     --update_llama_config='' \
     --load_dataset_state='' \
     --load_checkpoint='' \
@@ -34,7 +34,7 @@ python -m EasyLM.models.llama.llama_train \
     --train_dataset.huggingface_dataset.path='HuggingFaceFW/fineweb-edu' \
     --train_dataset.huggingface_dataset.streaming=True \
     --train_dataset.huggingface_dataset.seq_length=2048 \
-    --train_dataset.huggingface_dataset.batch_size=256 \
+    --train_dataset.huggingface_dataset.batch_size=512 \
     --train_dataset.huggingface_dataset.split='train' \
     --train_dataset.huggingface_dataset.name='sample-100BT' \
     --checkpointer.save_optimizer_state=True \
