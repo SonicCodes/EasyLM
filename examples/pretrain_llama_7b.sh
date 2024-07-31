@@ -15,7 +15,7 @@ export LIBTPU_INIT_ARGS='--xla_jf_spmd_threshold_for_windowed_einsum_mib=0 --xla
 python -m EasyLM.models.llama.llama_train \
     --mesh_dim='-1,4,1' \
     --dtype='fp16' \
-    --total_steps=250000 \
+    --total_steps=5000000 \
     --log_freq=50 \
     --save_model_freq=0 \
     --save_milestone_freq=2500 \
@@ -33,6 +33,8 @@ python -m EasyLM.models.llama.llama_train \
     --train_dataset.text_processor.fields='text' \
     --train_dataset.huggingface_dataset.path='HuggingFaceFW/fineweb-edu' \
     --train_dataset.huggingface_dataset.streaming=True \
+    --train_dataset.huggingface_dataset.seq_length=2048 \
+    --train_dataset.huggingface_dataset.batch_size=2048 \
     --train_dataset.huggingface_dataset.split='train' \
     --train_dataset.huggingface_dataset.name='sample-100BT' \
     --checkpointer.save_optimizer_state=True \
