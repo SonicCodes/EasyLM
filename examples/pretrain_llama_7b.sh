@@ -17,7 +17,7 @@ python -m EasyLM.models.llama.llama_train \
     --dtype='fp16' \
     --param_dtype='fp16' \
     --total_steps=100000 \
-    --log_freq=50 \
+    --log_freq=10 \
     --save_model_freq=0 \
     --save_milestone_freq=10000 \
     --load_llama_config='1b' \
