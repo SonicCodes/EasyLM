@@ -44,6 +44,6 @@ python -m EasyLM.models.llama.llama_train \
     --logger.project="open_llama_3b" \
     --logger.output_dir="$HOME/experiment_output/llama3-log" \
     --logger.wandb_dir="$HOME/experiment_output/open_llama_3b" \
-    --eval_steps=100
+    --eval_steps=100 \
 |& tee $HOME/output.txt
 
