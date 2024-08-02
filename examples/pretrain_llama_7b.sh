@@ -6,7 +6,7 @@ export LIBTPU_INIT_ARGS='--xla_jf_spmd_threshold_for_windowed_einsum_mib=0 --xla
 python -m EasyLM.models.llama.llama_train \
     --mesh_dim='-1,4,1' \
     --dtype='bfloat16' \
-    --total_steps=100000 \
+    --total_steps=200000 \
     --log_freq=10 \
     --save_model_freq=0 \
     --save_milestone_freq=10000 \
@@ -20,7 +20,7 @@ python -m EasyLM.models.llama.llama_train \
     --optimizer.adamw_optimizer.end_lr=3e-5 \
     --optimizer.adamw_optimizer.lr_warmup_steps=2000 \
     --optimizer.adamw_optimizer.lr_decay_steps=250000 \
-    --optimizer.accumulate_gradient_steps=2 \
+    --optimizer.accumulate_gradient_steps=4 \
     --train_dataset.type='huggingface' \
     --train_dataset.text_processor.fields='text' \
     --train_dataset.huggingface_dataset.path='HuggingFaceFW/fineweb-edu' \
