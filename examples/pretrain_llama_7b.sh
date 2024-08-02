@@ -19,7 +19,7 @@ python -m EasyLM.models.llama.llama_train \
     --total_steps=100000 \
     --log_freq=50 \
     --save_model_freq=0 \
-    --save_milestone_freq=7500 \
+    --save_milestone_freq=10000 \
     --load_llama_config='1b' \
     --update_llama_config='' \
     --load_dataset_state='' \
