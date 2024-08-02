@@ -20,7 +20,7 @@ python -m EasyLM.models.llama.llama_train \
     --optimizer.adamw_optimizer.end_lr=3e-5 \
     --optimizer.adamw_optimizer.lr_warmup_steps=2000 \
     --optimizer.adamw_optimizer.lr_decay_steps=250000 \
-    --optimizer.accumulate_gradient_steps=4 \
+    --optimizer.accumulate_gradient_steps=2 \
     --train_dataset.type='huggingface' \
     --train_dataset.text_processor.fields='text' \
     --train_dataset.huggingface_dataset.path='HuggingFaceFW/fineweb-edu' \
