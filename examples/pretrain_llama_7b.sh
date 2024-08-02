@@ -26,7 +26,7 @@ python -m EasyLM.models.llama.llama_train \
     --train_dataset.huggingface_dataset.path='HuggingFaceFW/fineweb-edu' \
     --train_dataset.huggingface_dataset.streaming=True \
     --train_dataset.huggingface_dataset.seq_length=2048 \
-    --train_dataset.huggingface_dataset.batch_size=128 \
+    --train_dataset.huggingface_dataset.batch_size=64 \
     --train_dataset.huggingface_dataset.split='train' \
     --train_dataset.huggingface_dataset.name='sample-100BT' \
     --checkpointer.save_optimizer_state=True \
