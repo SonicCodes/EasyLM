@@ -10,7 +10,7 @@ python -m EasyLM.models.llama.llama_train \
     --log_freq=10 \
     --save_model_freq=0 \
     --save_milestone_freq=10000 \
-    --load_llama_config='1b' \
+    --load_llama_config='7b' \
     --update_llama_config='' \
     --load_dataset_state='' \
     --load_checkpoint='' \
