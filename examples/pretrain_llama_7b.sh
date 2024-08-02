@@ -45,5 +45,13 @@ python -m EasyLM.models.llama.llama_train \
     --logger.output_dir="$HOME/experiment_output/llama3-log" \
     --logger.wandb_dir="$HOME/experiment_output/open_llama_3b" \
     --eval_steps=100 \
+    --eval_dataset.type='huggingface' \
+    --eval_dataset.text_processor.fields='text' \
+    --eval_dataset.huggingface_dataset.path='HuggingFaceFW/fineweb-edu' \
+    --eval_dataset.huggingface_dataset.streaming=True \
+    --eval_dataset.huggingface_dataset.seq_length=2048 \
+    --eval_dataset.huggingface_dataset.batch_size=128 \
+    --eval_dataset.huggingface_dataset.split='train' \
+    --eval_dataset.huggingface_dataset.name='sample-100BT' \
 |& tee $HOME/output.txt
 
