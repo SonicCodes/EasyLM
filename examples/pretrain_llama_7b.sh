@@ -15,6 +15,7 @@ export LIBTPU_INIT_ARGS='--xla_jf_spmd_threshold_for_windowed_einsum_mib=0 --xla
 python -m EasyLM.models.llama.llama_train \
     --mesh_dim='-1,4,1' \
     --dtype='fp16' \
+    --param_dtype='fp16' \
     --total_steps=100000 \
     --log_freq=50 \
     --save_model_freq=0 \
