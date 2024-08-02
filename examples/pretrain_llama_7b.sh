@@ -16,12 +16,10 @@ python -m EasyLM.models.llama.llama_train \
     --load_checkpoint='' \
     --optimizer.type='adamw' \
     --optimizer.adamw_optimizer.weight_decay=0.1 \
-    --optimizer.adamw_optimizer.init_lr=1e-6 \
-    --optimizer.adamw_optimizer.lr=1e-4 \
-    --optimizer.adamw_optimizer.end_lr=1e-5 \
+    --optimizer.adamw_optimizer.lr=3e-4 \
+    --optimizer.adamw_optimizer.end_lr=3e-5 \
     --optimizer.adamw_optimizer.lr_warmup_steps=2000 \
     --optimizer.adamw_optimizer.lr_decay_steps=250000 \
-    --optimizer.adamw_optimizer.clip_gradient=1.0 \
     --optimizer.accumulate_gradient_steps=4 \
     --train_dataset.type='huggingface' \
     --train_dataset.text_processor.fields='text' \
