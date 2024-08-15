@@ -35,7 +35,7 @@ python -m EasyLM.models.llama.llama_train \
     --load_llama_config='7b' \
     --update_llama_config='' \
     --update_llama_config='gs://caltech-bucket/LLM/easyLM/7bBaseRunInitFix/experiment_output/llama3-log/3a57aa87b85a4f55a59979274f800220/dataset.pkl' \
-    --load_dataset_state='trainstate::gs://caltech-bucket/LLM/easyLM/7bBaseRunInitFix/experiment_output/llama3-log/3a57aa87b85a4f55a59979274f800220/streaming_train_state' \
+    --load_checkpoint='trainstate::gs://caltech-bucket/LLM/easyLM/7bBaseRunInitFix/experiment_output/llama3-log/3a57aa87b85a4f55a59979274f800220/streaming_train_state' \
     --optimizer.type='adamw' \
     --optimizer.adamw_optimizer.weight_decay=0.1 \
     --optimizer.adamw_optimizer.lr=3e-4 \
